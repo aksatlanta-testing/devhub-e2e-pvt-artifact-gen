@@ -1,19 +1,35 @@
-# Binaries for programs and plugins
-*.exe
-*.exe~
-*.dll
-*.so
-*.dylib
-go_echo
+# Compiled files  
+*.tfstate  
+*.tfstate.backup  
+  
+# Terraform provider plugins  
+.terraform/  
+.terraform
+.terraform.lock.hcl
+  
+# IDE and editor files  
+.vscode/  
+.idea/  
+*.swp  
+*.swo  
+*.swn  
+*.bak  
+  
+# Temporary files  
+*.tmp  
+*.log  
+*.gz  
+*.zip  
+*.tar  
+*.tgz  
+  
+# OS-specific files  
+.DS_Store  
+Thumbs.db  
 
-# Test binary, built with `go test -c`
-*.test
-
-# Output of the go coverage tool, specifically when used with LiteIDE
-*.out
-
-.idea
-.vscode
-
-# Dependency directories (remove the comment below to include it)
-# vendor/
+**/temp/*
+*.tmp
+az-edge-module-export
+az-edge-module-export.exe
+az-edge-site-scale
+az-edge-site-scale.exe
