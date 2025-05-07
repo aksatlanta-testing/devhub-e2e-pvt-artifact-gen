@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: go-echo
-          image: devhube2e3424295fbf334bc385fa4e06c6b13a08.azurecr.io/kubeimage:latest:latest
+          image: devhube2efe1dd4ef374e49719fdc3ac19bfbd981.azurecr.io/templateimage:latest:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 1323

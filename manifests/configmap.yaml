@@ -7,3 +7,5 @@ metadata:
     app.kubernetes.io/name: go-echo
     kubernetes.azure.com/generator: devhub
 data:
+  key1: value1
+  key2: value2
