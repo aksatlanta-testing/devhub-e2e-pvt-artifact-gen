@@ -1,14 +1,14 @@
-# Default values for go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.
+# Default values for go-echo6ef5c358-c8ab-4303-8892-68a077362242.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-replicaCount: 1
+replicaCount: 2
 
 namespace: devhub-pvt-cluster-e2e-test-id-1
 
 containerPort: 1323
 
 image:
-  repository: devhube2e5f503599dd264df4b8539c4a451e4d4c.azurecr.io/helmimage:latest
+  repository: devhube2ede012bdfaf7a46b3beed993b1889abb3.azurecr.io/helmimage:latest
   tag: latest
   pullPolicy: Always
 
@@ -74,7 +74,7 @@ topologySpreadConstraints:
     whenUnsatisfiable: ScheduleAnyway
     labelSelector:
       matchLabels:
-        app.kubernetes.io/name: go-echodac66ce5-5a70-4156-8c7d-8f3db3177358
+        app.kubernetes.io/name: go-echo6ef5c358-c8ab-4303-8892-68a077362242
 
 affinity:
   podAntiAffinity:
@@ -84,7 +84,7 @@ affinity:
         topologyKey: kubernetes.io/hostname
         labelSelector:
           matchLabels:
-            app.kubernetes.io/name: go-echodac66ce5-5a70-4156-8c7d-8f3db3177358
+            app.kubernetes.io/name: go-echo6ef5c358-c8ab-4303-8892-68a077362242
 
 securityContext:
   seccompProfile:

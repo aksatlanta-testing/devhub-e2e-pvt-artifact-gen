@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.fullname" . }}
+  name: {{ include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.fullname" . }}
   labels:
-    {{- include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.labels" . | nindent 4 }}
+    {{- include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.labels" . | nindent 4 }}
   annotations:
     {{ toYaml .Values.service.annotations | nindent 4 }}
   namespace: {{ .Values.namespace }}
@@ -15,4 +15,4 @@ spec:
       protocol: TCP
       name: svchttp
   selector:
-    {{- include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.selectorLabels" . | nindent 6 }}
+    {{- include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.selectorLabels" . | nindent 6 }}

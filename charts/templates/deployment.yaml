@@ -1,9 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.fullname" . }}
+  name: {{ include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.fullname" . }}
   labels:
-    {{- include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.labels" . | nindent 4 }}
+    {{- include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.labels" . | nindent 4 }}
   namespace: {{ .Values.namespace }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
@@ -11,7 +11,7 @@ spec:
   {{- end }}
   selector:
     matchLabels:
-      {{- include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.selectorLabels" . | nindent 6 }}
+      {{- include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -19,7 +19,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.selectorLabels" . | nindent 8 }}
+        {{- include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.selectorLabels" . | nindent 8 }}
       namespace: {{ .Values.namespace }}
     spec:
       {{- with .Values.imagePullSecrets }}
@@ -49,7 +49,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           envFrom:
             - configMapRef:
-                name: {{ include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.fullname" . }}-config
+                name: {{ include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.fullname" . }}-config
             - secretRef:
                 name: secret-ref
                 optional: true

@@ -1,10 +1,10 @@
 
-{{- define "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.name" -}}
+{{- define "go-echo6ef5c358-c8ab-4303-8892-68a077362242.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 
-{{- define "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.fullname" -}}
+{{- define "go-echo6ef5c358-c8ab-4303-8892-68a077362242.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -18,14 +18,14 @@
 {{- end }}
 
 
-{{- define "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.chart" -}}
+{{- define "go-echo6ef5c358-c8ab-4303-8892-68a077362242.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 
-{{- define "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.labels" -}}
-helm.sh/chart: {{ include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.chart" . }}
-{{ include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.selectorLabels" . }}
+{{- define "go-echo6ef5c358-c8ab-4303-8892-68a077362242.labels" -}}
+helm.sh/chart: {{ include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.chart" . }}
+{{ include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.selectorLabels" . }}
 kubernetes.azure.com/generator: {{ .Values.generatorLabel }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
@@ -34,7 +34,7 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{- end }}
 
 
-{{- define "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "go-echodac66ce5-5a70-4156-8c7d-8f3db3177358.name" . }}
+{{- define "go-echo6ef5c358-c8ab-4303-8892-68a077362242.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "go-echo6ef5c358-c8ab-4303-8892-68a077362242.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
